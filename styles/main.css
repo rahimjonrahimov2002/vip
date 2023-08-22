@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.header {
+    height: 79px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    max-width: 970px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    width: 94px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar__item {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar__item a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__item:hover:not(.home) {
+    background-color: orange;
+}
+.navbar__item:hover a {
+    color: #fff;
+}
+
+.navbar__item.home a svg {
+    width: 27px;
+    height: 24px;
+    color: orange;
+}
+
+.contact {
+    right: 0;
+    top: calc(50% -  22.5px);
+    position: absolute;
+    background-color: orange;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+
+}
+.contact a svg {
+    color: white;
+}
+.contact:hover {
+    width: 55px;
+    height: 55px;
+    top: calc(50% -  24.5px);
+}
+
+.container {
+    max-width: 970px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 80vh;
+    color: #fff;
+  }
+
+  .swiper-slide {
+    padding: 20vh 0 0 0;
+  }
+
+  .swiper__title {
+    font-size: 75px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+.swiper__subtitle {
+    line-height: 34px;
+    font-size: 13px;
+    margin-top: 40px;
+    color: #fff;
+}
+.slide-1 {
+    background:linear-gradient(rgba(0, 0, 0, 0.52), rgba(22, 22, 22, 0.73)), url('../img/img01.jpeg') 0 50% / cover no-repeat;
+}
+.slide-2 {
+    background:linear-gradient(rgba(0, 0, 0, 0.52), rgba(22, 22, 22, 0.73)), url('../img/img02.jpeg') 0 50% / cover no-repeat;
+}
+.slide-3 {
+    background:linear-gradient(rgba(0, 0, 0, 0.52), rgba(22, 22, 22, 0.73)), url('../img/img03.jpeg') 0 50% / cover no-repeat;
+}
