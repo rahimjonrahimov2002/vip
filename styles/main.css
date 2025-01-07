@@ -1,131 +1,402 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-ul {
-    list-style-type: none;
-}
-a {
-    text-decoration: none;
-    color: #000;
-}
-img {
-    display: block;
-    max-width: 100%;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-html, body {
-    width: 100%;
-    height: 100%;
-    font-size: 14px;
-    font-family: Roboto, Arial, sans-serif;
-}
+        ul {
+            list-style-type: none;
+        }
 
-.header {
-    height: 79px;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    max-width: 970px;
-    margin: 0 auto;
-    position: relative;
-}
+        a {
+            text-decoration: none;
+            color: #000;
+        }
 
-.logo {
-    width: 94px;
-}
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        html,
+        body {
+            position: top;
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+            font-family: Roboto, Arial, sans-serif;
+            
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            /* Центрирует контент внутри header */
+            align-items: center;
+            /* Выравнивание по вертикали */
+            height: 70px;
+            /* Высота хедера */
+            padding: 0 20px;
+            /* Отступы */
+            position: relative;
+            /* Для правильного позиционирования .contact */
+        }
+
+        .logo img {
+            width: 94px;
+            height: auto;
+            /* Убедитесь, что логотип будет пропорционален */
+        }
+
+        /* Контейнер для навбара */
+        .navbar {
+            display: flex;
+            justify-content: right;
+            /* Элементы будут выровнены справа */
+            width: 100%;
+            /* Занимает всю ширину */
+            align-items: center;
+            /* Центрирует элементы по вертикали */
+        }
+
+        /* Список навигации */
+        .navbar__list {
+            display: flex;
+            gap: 20px;
+            /* Пробелы между элементами */
+            list-style-type: none;
+        }
+
+        .navbar__item {
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            position: relative;
+        }
+
+        .navbar__item a {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar__item:hover:not(.home) {
+            background-color: rgb(189, 189, 189);
+        }
+
+        .navbar__item:hover a {
+            color: #000000;
+        }
+
+        .navbar__item.home a svg {
+            width: 27px;
+            height: 24px;
+            color: orange;
+        }
+
+        /* Стиль для подменю */
+        .submenu {
+            display: none;
+            /* Скрыть подменю по умолчанию */
+            position: absolute;
+            top: 100%;
+            /* Размещаем подменю под родительским пунктом */
+            left: 0;
+            background-color: #fff;
+            /* Цвет фона подменю */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            /* Тень для подменю */
+            min-width: 180px;
+            /* Минимальная ширина подменю */
+            z-index: 10;
+            /* Убедитесь, что подменю будет сверху */
+        }
+
+        /* Стили для элементов подменю */
+        .submenu li {
+            padding: 10px;
+        }
+
+        .submenu li a {
+            color: #000000 !important;
+            /* Цвет текста по умолчанию */
+            text-decoration: none;
+        }
+
+        /* Цвет текста при наведении на элементы подменю */
+        .submenu li a:hover {
+            background-color: #f4f4f4;
+            /* Цвет фона при наведении на элемент */
+            color: #6e7174;
+            /* Цвет текста при наведении */
+        }
+
+        /* Показываем подменю при наведении на родительский элемент */
+        .navbar__item:hover .submenu {
+            display: block;
+            /* Показываем подменю при наведении */
+        }
 
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
+        .contact {
+            position: fixed;
+            /* Это фиксирует кнопку в правом нижнем углу */
+            right: 20px;
+            /* Отступ от правого края */
+            bottom: 20px;
+            /* Отступ снизу */
+            background-color: orange;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+            /* Это обеспечит, что кнопка будет на переднем плане */
+        }
 
-.navbar__item {
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
+        .contact a svg {
+            color: white;
+        }
 
-.navbar__item a {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
+        .contact:hover {
+            width: 55px;
+            height: 55px;
+            bottom: 25px;
+            /* Поднимаем кнопку немного при наведении */
+        }
 
-.navbar__item:hover:not(.home) {
-    background-color: orange;
-}
-.navbar__item:hover a {
-    color: #fff;
-}
 
-.navbar__item.home a svg {
-    width: 27px;
-    height: 24px;
-    color: orange;
-}
+        /* Контейнер для поиска */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
 
-.contact {
-    right: 0;
-    top: calc(50% -  22.5px);
-    position: absolute;
-    background-color: orange;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
+        /* Для поля ввода */
+        .search-container input {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-left: 10px;
+            /* Отступ от кнопки */
+        }
 
-}
-.contact a svg {
-    color: white;
-}
-.contact:hover {
-    width: 55px;
-    height: 55px;
-    top: calc(50% -  24.5px);
-}
+        /* Для кнопки с иконкой */
+        #search-icon {
+            border: none;
+            background-color: transparent;
+            font-size: 20px;
+            cursor: pointer;
+        }
 
-.container {
-    max-width: 970px;
-    margin: 0 auto;
-    height: 100%;
-}
 
-.swiper {
-    width: 100%;
-    height: 80vh;
-    color: #fff;
-  }
 
-  .swiper-slide {
-    padding: 20vh 0 0 0;
-  }
 
-  .swiper__title {
-    font-size: 75px;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-.swiper__subtitle {
-    line-height: 34px;
-    font-size: 13px;
-    margin-top: 40px;
-    color: #fff;
-}
-.slide-1 {
-    background:linear-gradient(rgba(0, 0, 0, 0.52), rgba(22, 22, 22, 0.73)), url('../img/img01.jpeg') 0 50% / cover no-repeat;
-}
-.slide-2 {
-    background:linear-gradient(rgba(0, 0, 0, 0.52), rgba(22, 22, 22, 0.73)), url('../img/img02.jpeg') 0 50% / cover no-repeat;
-}
-.slide-3 {
-    background:linear-gradient(rgba(0, 0, 0, 0.52), rgba(22, 22, 22, 0.73)), url('../img/img03.jpeg') 0 50% / cover no-repeat;
-}
+        .swiper {
+            width: 100%;
+            height: 80vh;
+            color: #fff;
+        }
+
+        .swiper-slide {
+            padding: 20vh 0 0 0;
+        }
+
+        .swiper__title {
+            text-align: center;
+            font-size: 75px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .swiper__subtitle {
+            padding: 10%;
+            line-height: 34px;
+            font-size: 14px;
+            margin-top: 40px;
+            color: #fff;
+        }
+
+
+        .slide-1 {
+            background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(22, 22, 22, 0.73)), url('../img/img01.jpeg') 0 50% / cover no-repeat;
+        }
+
+        .slide-2 {
+            background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(22, 22, 22, 0.73)), url('../img/img02.jpeg') 0 50% / cover no-repeat;
+        }
+
+        .slide-3 {
+            background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(22, 22, 22, 0.73)), url('../img/img03.jpeg') 0 50% / cover no-repeat;
+        }
+
+
+
+        .products {
+            padding: 40px 0;
+            background-color: #f4f4f4;
+        }
+
+        .products__title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .products__list {
+            display: flex;
+            flex-wrap: wrap;
+            /* Чтобы элементы могли переноситься на новую строку */
+            justify-content: space-between;
+            /* Разделяем продукты по строкам */
+            gap: 20px;
+            /* Пробел между продуктами */
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(33.333% - 20px); /* Устанавливаем ширину каждого продукта на 1/3 строки, учитывая отступы */
+            text-align: center;
+            transition: transform 0.3 ease;
+        }
+
+        .product__image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: opacity 0.3 ease;
+        }
+
+        .product__info {
+            padding: 20px;
+        }
+
+        .product__name {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .product__price {
+            font-size: 16px;
+            color: #ff5722;
+            margin-bottom: 20px;
+        }
+
+        .product__button {
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: backgroung-color 0.3 ease;
+        }
+
+        .product__button:hover {
+            background-color: #e64a19;
+        }
+
+        .product:hover {
+            transform: translateY(-5px)
+        }
+
+
+
+
+        /* Смена фонового изображения при наведении */
+        .product:nth-child(1):hover {
+            background-image: url('img/product1.2.jpg');
+            /* Меняем картинку на вторую при наведении */
+        }
+
+        .product:nth-child(2):hover {
+            background-image: url('img/product2.1.jpg');
+            /* Меняем картинку на вторую при наведении */
+        }
+
+        .product:nth-child(3):hover {
+            background-image: url('img/product3.1.jpg');
+            /* Меняем картинку на вторую при наведении */
+        }
+
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                /* Меняем на вертикальное расположение для маленьких экранов */
+                align-items: center;
+            }
+
+            .contact {
+                right: 10px;
+                  /* Уменьшаем отступы для мобильных устройств */
+                bottom: 10px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+
+
+
+        .cart {
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .cart h2 {
+            text-align: center;
+        }
+        
+        .cart-items {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .cart-items li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .cart-total {
+            text-align: right;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+        #checkout {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        #checkout:hover {
+            background-color: #e64a19;
+        }
+        
+          
+
+
+
+
+
+
