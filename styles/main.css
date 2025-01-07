@@ -394,9 +394,84 @@
         }
         
           
+/* Медиазапрос для экранов шириной до 1160px */
+@media (max-width: 1160px) {
+    #main-text-cont h1 {
+        font-size: 1.5rem;
+    }
+    
+    #main-text-cont p {
+        font-size: 0.9rem;
+    }
 
+    #slider {
+        max-width: 40vw;
+    }
+    
+    .slide {
+        min-width: 40vw;
+    }
+}
 
+/* Медиазапрос для экранов шириной до 710px */
+@media (max-width: 710px) {
+    #main-text-cont h1 {
+        font-size: calc(var(--index) * 1.5);
+    }
+    
+    #main-text-cont p {
+        font-size: calc(var(--index));
+    }
 
+    #cat-assort-cont {
+        flex-direction: column;
+    }
 
+    .cat-item {
+        width: 50%;
+    }
 
+    #slider {
+        max-width: 60vw;
+    }
+    
+    .slide {
+        min-width: 60vw;
+    }
+}
 
+/* Медиазапрос для экранов шириной до 580px */
+@media (max-width: 580px) {
+    #section1-cont {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        align-items: center;
+    }
+
+    #main-text-cont {
+        width: 100%;
+    }
+
+    #main-text-cont h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    #main-text-cont p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .cat-item {
+        width: 60%;
+    }
+
+    #cat-button {
+        font-size: small;
+    }
+
+    .slide p {
+        font-size: 0.8rem;
+    }
+}
