@@ -22,7 +22,7 @@ const swiper = new Swiper('.swiper', {
 
 document.getElementById('phone-icon').parentNode.addEventListener('click', function () {
   // Можно добавить всплывающее окно с номером или другие эффекты
-  alert('Номер телефона: +1234567890');
+  alert('Phone number: +1234567890');
 });
 
 

@@ -1,3 +1,4 @@
+
         * {
             margin: 0;
             padding: 0;
@@ -24,8 +25,7 @@
             width: 100%;
             height: 100%;
             font-size: 14px;
-            font-family: Roboto, Arial, sans-serif;
-            
+            font-family: Roboto, Arial, sans-serif;           
         }
 
         header {
@@ -196,6 +196,14 @@
 
 
 
+
+
+
+
+
+
+
+
         .swiper {
             width: 100%;
             height: 80vh;
@@ -222,6 +230,16 @@
         }
 
 
+
+
+
+
+
+
+
+
+
+
         .slide-1 {
             background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(22, 22, 22, 0.73)), url('../img/img01.jpeg') 0 50% / cover no-repeat;
         }
@@ -233,6 +251,16 @@
         .slide-3 {
             background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(22, 22, 22, 0.73)), url('../img/img03.jpeg') 0 50% / cover no-repeat;
         }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -312,38 +340,13 @@
 
 
 
-        /* Смена фонового изображения при наведении */
-        .product:nth-child(1):hover {
-            background-image: url('img/product1.2.jpg');
-            /* Меняем картинку на вторую при наведении */
-        }
-
-        .product:nth-child(2):hover {
-            background-image: url('img/product2.1.jpg');
-            /* Меняем картинку на вторую при наведении */
-        }
-
-        .product:nth-child(3):hover {
-            background-image: url('img/product3.1.jpg');
-            /* Меняем картинку на вторую при наведении */
-        }
 
 
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                /* Меняем на вертикальное расположение для маленьких экранов */
-                align-items: center;
-            }
 
-            .contact {
-                right: 10px;
-                  /* Уменьшаем отступы для мобильных устройств */
-                bottom: 10px;
-                width: 40px;
-                height: 40px;
-            }
-        }
+
+
+
+
 
 
 
@@ -393,7 +396,170 @@
             background-color: #e64a19;
         }
         
+
+
+
+
+
+
+
+        #about-us {
+            background-color: #f4f4f4;
+            padding: 40px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+          }
           
+          #about-us h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+          }
+          
+          #about-us p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 15px;
+          }
+
+          
+
+
+
+
+
+         #contact-us {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            
+          }
+          
+          #contact-us h2 {
+            text-align: center;
+          }
+          
+          #contact-us div {
+            margin-bottom: 15px;
+          }
+          
+          #contact-us label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+          
+          #contact-us input,
+          #contact-us textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          }
+          
+          #contact-us button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          
+          #contact-us button:hover {
+            background-color: #c55d20;
+          }
+          
+   
+          
+
+
+
+
+
+
+
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+
+}
+
+.social-links li a {
+  font-size: 1.5em;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Медиазапрос для экранов шириной до 1160px */
 @media (max-width: 1160px) {
     #main-text-cont h1 {
